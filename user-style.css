@@ -183,7 +183,6 @@ canvas.clock {
 
 .inputcell textarea,
 div.shim {
-  padding-left: 8px !important;
   background: var(--body-bg-color) !important;
 }
 
