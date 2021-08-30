@@ -1,0 +1,323 @@
+/* General vars */
+:root {
+  --font-family: 'Alliance No. 1', 'Roboto', 'Segoe UI', -apple-system, 'Roboto', 'Rubik', system-ui, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, Helvetica Neue, Arial;
+  --body-color: rgba(255, 255, 255, .75);
+  --msg-self-color: rgb(236, 248, 255);
+  --msg-self-bg-color: #1b1f27;
+  --msg-action-color: #f1fa8c;
+  --border-color: #20283b;
+  --body-color-muted: #6272a4;
+  --body-bg-color: #0b152b;
+  --button-color: #50fa7b;
+  --button-text-color-hover: #282a36;
+  --overlay-bg-color: rgba(0, 0, 0, .5);
+  --link-color: #f8f8f2;
+  --window-bg-color: #0d162d;
+  --window-heading-color: #44475a;
+  --date-marker-color: rgba(40, 42, 54, .5);
+  --unread-marker-color: #ff79c6;
+  --highlight-bg-color: rgba(255, 255, 255, .08);
+  --highlight-msg-color: #fff;
+  --highlight-border-color: #44475a;
+  --upload-progressbar-color: #50fa7b;
+  --time-color: #4e5e8a;
+  --time-color-hover: #5e70a3;
+  --channel-list-item-hover-background: rgba(255, 255, 255, .05);
+  --font-size: 15px;
+  --font-size-msg: 16px;
+  --font-size-channel-list: 15px;
+  --font-weight-msg: 300;
+  --font-weight-user: 500;
+}
+
+body {
+  font: var(--font-size) var(--font-family);
+  /* -moz-osx-font-smoothing: grayscale; */
+  -webkit-font-smoothing: subpixel-antialiased;
+  /* text-rendering: geometricPrecision; */
+  text-size-adjust: none;
+  background: var(--window-bg-color)!important;
+
+  /* Improve font smoothing on Windows 10 */
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004) !important;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+.bufferinputcell .timecell,
+#sidebarwrapper,
+#timeContainer {
+  display: none !important;
+}
+
+.time-right .nickinputcell {
+  padding-right: 12px !important;
+  border-top: 1px solid var(--border-color) !important;
+}
+
+.multiline span.content,
+body div,
+body span,
+div.log div.chat b,
+div.log div.chat strong,
+div.log div.chat p {
+  font-family: var(--font-family) !important;
+}
+
+.seenDivider,
+.seenDivider *,
+div.log div.seenDivider hr,
+.lastSeen,
+.lastSeen *,
+.lastSeen hr,
+.divider-text {
+  color: var(--unread-marker-color) !important;
+  border-color: var(--unread-marker-color) !important;
+  opacity: 1 !important;
+}
+
+.nickinput > div,
+div.status p.buttons,
+p.buttons button {
+  color: rgba(255, 255, 255, .5) !important;
+}
+
+div.log span.date {
+  color: var(--time-color) !important;
+}
+
+div.log span.date:hover {
+  color: var(--time-color-hover) !important;
+}
+
+.mode-hidesymbol span.mode_pill,
+.prefsShowModeSymbol__label span.mode_prefix {
+  display: none !important;
+}
+
+.avatars-off.multiline .authorWrap {
+  margin-left: 0 !important;
+}
+
+.messageLayout__preview,
+div.buffermain {
+  background: var(--body-bg-color) !important;
+}
+
+div.log div.pendingError span.fileWrap .fileProgress,
+div.log span.fileWrap .file,
+div.log span.fileWrap .progress {
+  background-color: var(--body-bg-color) !important;
+}
+
+div.log span.fileWrap .file,
+div.log span.fileWrap .fileProgress {
+  border-color: var(--body-bg-color) !important;
+}
+
+div.log div.self {
+  background: var(--body-bg-color) !important;
+}
+
+.time-right.avatars-off.multiline div.messageRow {
+  padding-left: 26px !important;
+}
+
+div.log div.highlight {
+  background-color: var(--highlight-bg-color) !important;
+  border-bottom: 1px solid var(--highlight-bg-color) !important;
+  border-top: 1px solid var(--highlight-bg-color) !important;
+  padding-top: 7px !important;
+  padding-bottom: 7px !important;
+}
+
+div.log div.bottomSeen span,
+div.log div.focusSeen span,
+div.log div.lastSeen .divider-text,
+div.log div.status {
+  background: var(--body-bg-color) !important;
+}
+
+.bufferHead {
+  padding: 3px 8px 3px 24px !important;
+}
+
+.bufferstatus div.status h2.bufferHeading span.label {
+  font-size: var(--font-size) !important;
+  font-weight: 700 !important;
+  color: var(--body-color) !important;
+}
+
+div.dateWrapper table.date {
+  box-shadow: inset 0 -3px 0 var(--window-bg-color), inset 0 -4px 0 var(--window-bg-color) !important;
+}
+
+div.dateWrapper table.date,
+div.log div.dateChange h3 {
+  color: var(--body-color) !important;
+  background-color: var(--window-bg-color) !important;
+}
+
+canvas.clock {
+  opacity: .6;
+}
+
+.bufferHead {
+  border-bottom-color: var(--window-bg-color) !important;
+  background-color: var(--window-bg-color) !important;
+}
+
+.nickcell {
+  display: none !important;
+}
+
+.clipboardTriggerCell,
+.emojicell,
+.inputcell,
+.lockcell,
+.nickcell,
+.nickinput,
+.uploadcell {
+  background: var(--body-bg-color) !important;
+}
+
+.inputcell textarea,
+div.shim {
+  padding-left: 8px !important;
+  background: var(--body-bg-color) !important;
+}
+
+#sidebar {
+  border-right: 1px solid var(--border-color);
+}
+
+div#sidebarwrapper {
+  box-shadow: inset 5px 0 0 0 var(--window-bg-color) !important;
+  border-color: var(--window-bg-color) !important;
+  background-color: var(--window-bg-color) !important;
+}
+
+.bufferList .active.selected span.buffer,
+.bufferList .active.selected span.buffer:focus {
+  background-color: var(--window-bg-color) !important;
+  border-color: var(--window-bg-color) !important;
+  color: #6c80b5 !important;
+}
+
+.bufferList .active span.buffer,
+.bufferList .active span.buffer:focus,
+.bufferList .active span.buffer:hover {
+  color: var(--body-color) !important;
+}
+
+.bufferList h2 span.buffer,
+.bufferList h2.buffer span.buffer {
+  border-color: var(--window-bg-color) !important;
+}
+
+.bufferList h2 span.buffer {
+  box-shadow: 0 1px 0 var(--window-bg-color) !important;
+  background-color: var(--window-bg-color) !important;
+}
+
+body .bufferList .buffer span.buffer:focus,
+body .bufferList .buffer span.buffer:hover,
+body .bufferList .openArchives p.archiveToggle button,
+body .bufferList p.archiveToggle button:focus,
+body .bufferList p.archiveToggle button:hover,
+body .bufferList p.collapseToggle button:focus,
+body .bufferList p.collapseToggle button:hover {
+  background-color: var(--window-bg-color) !important;
+  var(--body-color) !important;
+}
+
+.contextMenu {
+  background-color: var(--window-bg-color) !important;
+  box-shadow: 2px 2px 0 var(--window-bg-color) !important;
+  border-color: var(--window-bg-color) !important;
+}
+
+.contextMenu hr,
+div.log div.backlogDivider hr,
+div.log div.fetch hr {
+  border-color: var(--border-color) !important;
+}
+
+div.log div.fetch span,
+div.log div.fetch {
+  background: var(--window-bg-color) !important;
+}
+
+.accountMenu__button {
+  background-color: var(--window-bg-color) !important;
+  color: var(--body-color) !important;
+  font-weight: 400 !important;
+  border-top-color: var(--window-bg-color) !important;
+  box-shadow: 0 -1px 0 var(--window-bg-color) !important;
+  text-shadow: 1px 1px 0 var(--window-bg-color) !important;
+}
+
+.accountMenu {
+  background-color: var(--window-bg-color) !important;
+  color: var(--body-color) !important;
+  box-shadow: none !important;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: var(--body-bg-color) !important;
+}
+
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb {
+  background-color: var(--body-bg-color) !important;
+  border-color: var(--body-bg-color) !important;
+}
+
+div.scroll::-webkit-scrollbar-thumb,
+div.scroll::-webkit-scrollbar-track-piece,
+::-webkit-scrollbar-track-piece,
+::-webkit-scrollbar-thumb {
+  border-color: var(--body-bg-color) !important;
+}
+
+div#container {
+  min-width: 0 !important;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: var(--body-bg-color) !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--window-bg-color) !important;
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background-color: var(--body-bg-color) !important;
+}
+
+div.scroll::-webkit-scrollbar-track-piece,
+div.scroll::-webkit-scrollbar-thumb {
+  border-color: var(--body-bg-color) !important;
+}
+
+.inputstatuscell {
+  height: 0 !important;
+}
+
+.buffernick .nick,
+div.log div.me .bufferLink.server,
+div.log div.me .bufferLink.user,
+div.log div.messageRow {
+  line-height: 1.7 !important;
+  font-size: var(--font-size-msg) !important;
+}
+
+.accountMenu__button,
+.topic {
+  font-size: var(--font-size) !important;
+}
+
+.topic {
+  color: rgba(255, 255, 255, .5) !important;
+}
