@@ -162,6 +162,12 @@ canvas.clock {
   opacity: .6;
 }
 
+.extras span.extrasDismiss,
+.extras span.extrasBar {
+  border-bottom-color: var(--border-color) !important;
+  background-color: var(--border-color) !important;
+}
+
 .bufferHead {
   border-bottom-color: var(--window-bg-color) !important;
   background-color: var(--window-bg-color) !important;
