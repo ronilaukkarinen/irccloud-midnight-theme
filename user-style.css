@@ -45,7 +45,6 @@ body {
 }
 
 .bufferinputcell .timecell,
-#sidebarwrapper,
 #timeContainer {
   display: none !important;
 }
@@ -76,6 +75,7 @@ div.log div.seenDivider hr,
   opacity: 1 !important;
 }
 
+.accountMenu__caret,
 .nickinput > div,
 div.status p.buttons,
 p.buttons button {
@@ -192,13 +192,9 @@ div.shim {
   background: var(--body-bg-color) !important;
 }
 
-#sidebar {
-  border-right: 1px solid var(--border-color);
-}
-
 div#sidebarwrapper {
   box-shadow: inset 5px 0 0 0 var(--window-bg-color) !important;
-  border-color: var(--window-bg-color) !important;
+  border-color: var(--border-color) !important;
   background-color: var(--window-bg-color) !important;
 }
 
